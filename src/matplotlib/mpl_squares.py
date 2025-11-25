@@ -2,9 +2,11 @@ import matplotlib
 import matplotlib.pyplot as plt
 matplotlib.use('TkAgg')
 
+input_values = [1, 2, 3, 4, 5]
 squares = [1, 4, 9, 16, 25]
+
 fig, ax = plt.subplots()
-ax.plot(squares, linewidth=3)
+ax.plot( input_values, squares, linewidth=3)
 
 # Задание заголовка диаграммы и меток осей.
 ax.set_title("Square Numbers", fontsize=24)
