@@ -4,8 +4,6 @@ import matplotlib.pyplot as plt
 matplotlib.use('TkAgg')
 
 
-# Создание нескольких случайных блужданий
-# Новые блуждания создаются до тех пор, пока программа остается активной.
 while True:
     # Создание случайного блуждания
     rw = RandomWalk(50_000)
@@ -13,7 +11,7 @@ while True:
 
     # Нанесение точек на диаграмму
     plt.style.use('classic')
-    fig, ax = plt.subplots(figsize=(10, 6), dpi=128)
+    fig, ax = plt.subplots(figsize=(10, 9), dpi=128)
     point_numbers = range(rw.num_points)
     ax.scatter(rw.x_values, rw.y_values, c=point_numbers, cmap=plt.cm.Blues, edgecolors='none', s=1)
     ax.set_aspect('equal')
@@ -27,7 +25,3 @@ while True:
     ax.get_yaxis().set_visible(False)
 
     plt.show()
-
-    keep_runing = input("Make another walk? (y/n): ")
-    if keep_runing == 'n':
-        break
